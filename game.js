@@ -504,7 +504,7 @@ class Game {
         const cellW = w / this.w;
         const cellH = h / this.h;
 
-        this.grid.show(x, y, w, h, this.colors, this.pieceImages, paused, showGridLines, oldGraphics);
+        this.grid.show(x, y, w, h, this.pieceImages, paused, showGridLines, oldGraphics);
         if (this.currentPiece && !paused) {
             this.currentPiece.show(x, y, cellW, cellH, this.colors, this.pieceImages, oldGraphics);
         }
