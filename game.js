@@ -33,7 +33,16 @@ class Game {
         }
 
         this.pieceImages = pieceImages;
-        this.colors = [
+        this.colorsA = [
+            color(255, 0, 0), //Red boomerang
+            color(0, 255, 0), //Green fortune cookie
+            color(255, 255, 0), //Yellow pencil
+            color(255, 0, 255), //Pink boomerang
+            color(0, 255, 255), //Blue pencil
+            color(250, 100, 25), //Orange Razor
+            color(255), //White Ninja
+        ];
+        this.colorsD = [
             color(0, 0, 0), //Red boomerang
             color(0, 0, 0), //Green fortune cookie
             color(0, 0, 0), //Yellow pencil
@@ -504,9 +513,9 @@ class Game {
         const cellW = w / this.w;
         const cellH = h / this.h;
 
-        this.grid.show(x, y, w, h, this.colors, this.pieceImages, paused, showGridLines, oldGraphics);
+        this.grid.show(x, y, w, h, this.colorsA, this.pieceImages, paused, showGridLines, oldGraphics);
         if (this.currentPiece && !paused) {
-            this.currentPiece.show(x, y, cellW, cellH, this.colors, this.pieceImages, oldGraphics);
+            this.currentPiece.show(x, y, cellW, cellH, this.colorsD, this.pieceImages, oldGraphics);
         }
 
 
@@ -609,21 +618,21 @@ class Game {
                     nextPiecePos.y,
                     nextPieceDim.x,
                     nextPieceDim.y,
-                    this.colors,
+                    this.colorsA,
                     this.pieceImages,
                     oldGraphics
                 );
             } else if (this.nextSingles == 2) { //Show 3 Ninjas coming up
                 const spacingX = nextPieceDim.x / 7;
                 const spacingY = nextPieceDim.y / 7;
-                this.nextPiece.showAt(nextPiecePos.x - spacingX, nextPiecePos.y - spacingY, nextPieceDim.x, nextPieceDim.y, this.colors, this.pieceImages, oldGraphics);
-                this.nextPiece.showAt(nextPiecePos.x, nextPiecePos.y, nextPieceDim.x, nextPieceDim.y, this.colors, this.pieceImages, oldGraphics);
-                this.nextPiece.showAt(nextPiecePos.x + spacingX, nextPiecePos.y + spacingY, nextPieceDim.x, nextPieceDim.y, this.colors, this.pieceImages, oldGraphics);
+                this.nextPiece.showAt(nextPiecePos.x - spacingX, nextPiecePos.y - spacingY, nextPieceDim.x, nextPieceDim.y, this.colorsA, this.pieceImages, oldGraphics);
+                this.nextPiece.showAt(nextPiecePos.x, nextPiecePos.y, nextPieceDim.x, nextPieceDim.y, this.colorsA, this.pieceImages, oldGraphics);
+                this.nextPiece.showAt(nextPiecePos.x + spacingX, nextPiecePos.y + spacingY, nextPieceDim.x, nextPieceDim.y, this.colorsA, this.pieceImages, oldGraphics);
             } else if (this.nextSingles == 1) { //Show 2 ninjas coming up
                 const spacingX = nextPieceDim.x / 7;
                 const spacingY = nextPieceDim.y / 7;
-                this.nextPiece.showAt(nextPiecePos.x - spacingX/2, nextPiecePos.y - spacingY/2, nextPieceDim.x, nextPieceDim.y, this.colors, this.pieceImages, oldGraphics);
-                this.nextPiece.showAt(nextPiecePos.x + spacingX/2, nextPiecePos.y + spacingY/2, nextPieceDim.x, nextPieceDim.y, this.colors, this.pieceImages, oldGraphics);
+                this.nextPiece.showAt(nextPiecePos.x - spacingX/2, nextPiecePos.y - spacingY/2, nextPieceDim.x, nextPieceDim.y, this.colorsA, this.pieceImages, oldGraphics);
+                this.nextPiece.showAt(nextPiecePos.x + spacingX/2, nextPiecePos.y + spacingY/2, nextPieceDim.x, nextPieceDim.y, this.colorsA, this.pieceImages, oldGraphics);
             }
         }
 
