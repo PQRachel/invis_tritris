@@ -102,12 +102,12 @@ class Grid {
         }
 
         //Draws only the outside borders on top of the pieces, so they don't stick out of the board
-        stroke(100);
-        strokeWeight(2);
-        line(x, y, x, y + h);
-        line(x + this.w * cellW, y, x + this.w * cellW, y + h);
-        line(x, y, x + w, y);
-        line(x, y + this.h * cellH, x + w, y + this.h * cellH);
+        //stroke(100);
+        //strokeWeight(2);
+        //line(x, y, x, y + h);
+        //line(x + this.w * cellW, y, x + this.w * cellW, y + h);
+        //line(x, y, x + w, y);
+        //line(x, y + this.h * cellH, x + w, y + this.h * cellH);
     }
 }
 
