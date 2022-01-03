@@ -34,13 +34,13 @@ class Game {
 
         this.pieceImages = pieceImages;
         this.colors = [
-            color(255, 0, 0), //Red boomerang
-            color(0, 255, 0), //Green fortune cookie
-            color(255, 255, 0), //Yellow pencil
-            color(255, 0, 255), //Pink boomerang
-            color(0, 255, 255), //Blue pencil
-            color(250, 100, 25), //Orange Razor
-            color(255), //White Ninja
+            color(0, 0, 0), //Red boomerang
+            color(0, 0, 0), //Green fortune cookie
+            color(0, 0, 0), //Yellow pencil
+            color(0, 0, 0), //Pink boomerang
+            color(0, 0, 0), //Blue pencil
+            color(0, 0, 0), //Orange Razor
+            color(0, 0, 0), //White Ninja
         ];
         this.piecesJSON = piecesJSON.pieces;
 
@@ -504,9 +504,9 @@ class Game {
         const cellW = w / this.w;
         const cellH = h / this.h;
 
-        this.grid.show(x, y, w, h, this.pieceImages, paused, showGridLines, oldGraphics);
+        this.grid.show(x, y, w, h, this.colors, this.pieceImages, paused, showGridLines, oldGraphics);
         if (this.currentPiece && !paused) {
-            this.currentPiece.show(x, y, cellW, cellH, this.pieceImages, oldGraphics);
+            this.currentPiece.show(x, y, cellW, cellH, this.colors, this.pieceImages, oldGraphics);
         }
 
 
