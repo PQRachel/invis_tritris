@@ -210,15 +210,15 @@ class Triangle {
             stroke(100);
             strokeWeight(2);
             fill(colors[this.clr]);
-            //if (row == 0 && col == 0) {
-            //    triangle(x, y, x + w, y, x, y + h);
-            //} else if (row == 0 && col == 1) {
-            //    triangle(x, y, x + w, y, x + w, y + h);
-            //} else if (row == 1 && col == 0) {
-            //    triangle(x, y, x, y + h, x + w, y + h);
-            //} else if (row == 1 && col == 1) {
-            //    triangle(x, y + h, x + w, y, x + w, y + h);
-            //}
+            if (row == 0 && col == 0) {
+                triangle(x, y, x + w, y, x, y + h);
+            } else if (row == 0 && col == 1) {
+                triangle(x, y, x + w, y, x + w, y + h);
+            } else if (row == 1 && col == 0) {
+                triangle(x, y, x, y + h, x + w, y + h);
+            } else if (row == 1 && col == 1) {
+                triangle(x, y + h, x + w, y, x + w, y + h);
+            }
         } else {
             const thisColor = pieceImages[this.clr];
             let rot;
