@@ -84,22 +84,23 @@ class Grid {
             for (let j = 0; j <= this.h; j++)
                 line(x, y + j * cellH, x + w, y + j * cellH);
         }
-        if (!paused) {
-            //Draws the triangles in the grid
-            for (let i = 0; i < this.h; i++) {
-                for (let j = 0; j < this.w; j++) {
-                    this.grid[i][j].show(
-                        x + j * cellW,
-                        y + i * cellH,
-                        cellW,
-                        cellH,
-                        colors,
-                        pieceImages,
-                        oldGraphics
-                    );
-                }
-            }
-        }
+        //
+        //if (!paused) {
+        //    //Draws the triangles in the grid
+        //    for (let i = 0; i < this.h; i++) {
+        //        for (let j = 0; j < this.w; j++) {
+        //            this.grid[i][j].show(
+        //                x + j * cellW,
+        //                y + i * cellH,
+        //                cellW,
+        //                cellH,
+        //                colors,
+        //                pieceImages,
+        //                oldGraphics
+        //            );
+        //        }
+        //    }
+        //}
 
         //Draws only the outside borders on top of the pieces, so they don't stick out of the board
         stroke(100);
