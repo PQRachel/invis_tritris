@@ -681,6 +681,13 @@ class Game {
             noFill();
             rect(x, y, w, h);
         }
+        
+        if (!this.practice) {
+            stroke(255,0,255);
+            strokeWeight(4);
+            noFill();
+            rect(x, y, w, h);
+        }
 
         if (!flashing) this.redraw = false;
     }
