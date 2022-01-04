@@ -683,7 +683,7 @@ class Game {
         }
         
         if (!this.practice) {
-            stroke(255,0,255);
+            stroke(200,85,200);
             strokeWeight(4);
             noFill();
             rect(x, y, w, h);
